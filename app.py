@@ -1,10 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from pdf2image import convert_from_bytes
 from PIL import Image, ImageOps
 import base64
 import io
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/convert', methods=['POST'])
 def convert_pdf_to_png():
