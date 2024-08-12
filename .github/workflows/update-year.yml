@@ -1,26 +1,15 @@
 name: Update Copyright Year
 
 on:
-  schedule:
-    - cron: '0 0 1 1 *'  # Runs at midnight on the first day of each year
-  workflow_dispatch:       # Allows manual triggering of the workflow
+  push:
+    branches: [ main ]
 
 jobs:
-  update-year:
+  update_copyright:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3  # This action will automatically use the latest Node.js version
-
-      - name: Update year in README
+      - uses: actions/checkout@v3
+      - name: Update copyright year
         run: |
-          CURRENT_YEAR=$(date +"%Y")
-          sed -i "s/(© Copyright [0-9]\{4\})/(© Copyright $CURRENT_YEAR)/" README.md
-
-      - name: Commit changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -am "Update copyright year to $CURRENT_YEAR"
-          git push
+          current_year=$(date +%Y)
+          sed -i "s/Copyright \(.*\)/Copyright $current_year/" README.md
