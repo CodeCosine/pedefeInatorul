@@ -1,5 +1,5 @@
 # Intro
-Refuz sa cred necesitatea unui API separat pentru a transforma un PDF la PNG
+Refuz sa cred necesitatea unui API separat pentru a transforma un PDF la PNG.
 Acest API este hostat prin platforma RENDER
 
 ' bonus se selecteaza doar partea utila din document
