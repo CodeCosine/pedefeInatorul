@@ -9,8 +9,8 @@ Acest API este hostat prin platforma RENDER
 
 ' bonus se selecteaza doar partea utila din document
 # Utilizare
-1. Accesand https://flask-hello-world-xi0b.onrender.com/ si incarcand un document in format PDF. Outputul va fi o captura a primei pagini in format PNG
-2. Trimitand un request de tip POST catre https://flask-hello-world-xi0b.onrender.com/convert avand ca payload raw-text sub forma
+1. Accesand https://pedefeinatorul-ujtg.onrender.com/ si incarcand un document in format PDF. Outputul va fi o captura a primei pagini in format PNG
+2. Trimitand un request de tip POST catre https://pedefeinatorul-ujtg.onrender.com//convert avand ca payload raw-text sub forma
    { "pdf_base64": "<fisier PDF encoded as base64>" }
 Raspunsul primit va fi un raw-text sub forma
   {"png_base64":"<fisier PNG encoded as base64>"}
