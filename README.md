@@ -2,8 +2,6 @@
 ! Acest API este pus pe contul beneficiarului si nu v-a fi actualizat decat și DOAR la dorinta sa de alte modificari.
 Link-ul original este https://github.com/AndreiOp235/pedefeInatorul
 
-© Copyright 2023
-
 ---
 # Intro
 Refuz sa cred necesitatea unui API separat pentru a transforma un PDF la PNG.
