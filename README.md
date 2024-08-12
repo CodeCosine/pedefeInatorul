@@ -1,3 +1,8 @@
+# IMPORTANT
+! Acest API este pus pe contul beneficiarului si nu v-a fi actualizat decat și DOAR la dorinta sa de alte modificari.
+© Copyright 2023
+
+---
 # Intro
 Refuz sa cred necesitatea unui API separat pentru a transforma un PDF la PNG.
 Acest API este hostat prin platforma RENDER
