@@ -1,6 +1,7 @@
 # Intro
 Refuz sa cred necesitatea unui API separat pentru a transforma un PDF la PNG
 Acest API este hostat prin platforma RENDER
+
 ' bonus se selecteaza doar partea utila din document
 # Utilizare
 1. Accesand https://flask-hello-world-xi0b.onrender.com/ si incarcand un document in format PDF. Outputul va fi o captura a primei pagini in format PNG
