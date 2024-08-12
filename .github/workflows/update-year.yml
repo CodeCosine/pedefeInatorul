@@ -1,18 +1,17 @@
 name: Update Copyright Year
 
 on:
-  # This workflow runs at midnight on the first day of each year
   schedule:
-    - cron: '0 0 1 1 *'
-  # This workflow can also be manually triggered if needed
-  workflow_dispatch:
+    - cron: '0 0 1 1 *'  # Runs at midnight on the first day of each year
+  workflow_dispatch:       # Allows manual triggering of the workflow
 
 jobs:
   update-year:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # This action will automatically use the latest Node.js version
 
       - name: Update year in README
         run: |
