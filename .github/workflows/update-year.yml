@@ -1,0 +1,27 @@
+name: Update Copyright Year
+
+on:
+  # This workflow runs at midnight on the first day of each year
+  schedule:
+    - cron: '0 0 1 1 *'
+  # This workflow can also be manually triggered if needed
+  workflow_dispatch:
+
+jobs:
+  update-year:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update year in README
+        run: |
+          CURRENT_YEAR=$(date +"%Y")
+          sed -i "s/(© Copyright [0-9]\{4\})/(© Copyright $CURRENT_YEAR)/" README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update copyright year to $CURRENT_YEAR"
+          git push
